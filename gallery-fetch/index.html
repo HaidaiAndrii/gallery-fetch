@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="hero">
+        <h2>TEST APP</h2>
+    </div>
+    <div class="item-focus-wrapper"></div>
+    <div class="gallery-wrapper"></div>
+
+    <div class="item-focus">
+        <div class="item">
+            <img src=`${element.url}` alt="" class='large-image'>
+        </div>
+        <form class="add-comment-form" onsubmit="return false">
+            <input type="text" placeholder='Ваше имя' class="comment-form-input user-name" />
+            <input type="text" placeholder='Ваш комметнатрий' class="comment-form-input user-text" />
+            <button class='comment-form-send' type="button">Оставить комментарий</button>
+        </form>
+        <div class="item-comments"></div>
+        <div class="close-button">
+            <?xml version="1.0" ?><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><g id="cross"><line class="cls-1" x1="7" x2="25" y1="7" y2="25"/><line class="cls-1" x1="7" x2="25" y1="25" y2="7"/></g></svg>
+        </div>
+    </div>
+
+    <script src="src/script.js"></script>
+
+</body>
+
+</html>
