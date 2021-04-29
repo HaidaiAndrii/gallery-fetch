@@ -35,32 +35,12 @@ async function sendRequest(id = 0) {
 
             return data;
         });
-
 }
 
 async function init() {
-    // await fetch('https://boiling-refuge-66454.herokuapp.com/images')
-    //     .then((response) => {
-    //         return response.json();
-    //     })
-    //     .then((data) => {
-    //         data.map(picture => createBlock(picture));
-    //     }); 
-
     await sendRequest();
     setListeners();
 }
-
-// function getItemById(id) {
-//     fetch(`https://boiling-refuge-66454.herokuapp.com/images/${id}`)
-//         .then((response) => {
-//             return response.json();
-//         })
-//         .then((data) => {
-//             openItemWindow(data);
-//             return data;
-//         });
-// }
 
 function setListeners() {
     const images = document.querySelectorAll('.gallery-img');
@@ -68,13 +48,9 @@ function setListeners() {
     images.forEach(image => {
         image.addEventListener('click', (event) => {
             sendRequest(event.target.id);
-            // getItemById(event.target.id)
         })
     })
 }
-
-init();
-
 
 function createBlock(element) {
     const block = `
@@ -83,8 +59,6 @@ function createBlock(element) {
     </div>`;
     gallery.insertAdjacentHTML('afterbegin', block);
 }
-
-
 
 function openItemWindow(element) {
     image.src = element.url;
@@ -178,3 +152,5 @@ function decodeDate(UNIX_timestamp) {
     let time = ` ${ date}.${ month }.${ year }`;
     return time
 }
+
+init();
