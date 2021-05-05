@@ -64,9 +64,7 @@ function openItemWindow(element) {
     image.src = element.url;
     image.id = element.id;
     modalWimdow.style.display = 'grid';
-
     modalWimdowWrapper.style.display = 'block';
-
     loadComments(element.comments);
 }
 
@@ -116,7 +114,7 @@ async function createComment() {
         userName.classList.remove('error');
         comment.classList.remove('error');
 
-        response.status === 204 ? button.style.backgroundColor = 'green' : button.style.backgroundColor = 'red';
+        response.ok ? button.style.backgroundColor = 'green' : button.style.backgroundColor = 'red';
     } else {
         button.style.backgroundColor = 'red';
         comment.value ? comment.classList.remove('error') : comment.classList.add('error');
@@ -154,3 +152,4 @@ function decodeDate(UNIX_timestamp) {
 }
 
 init();
+
